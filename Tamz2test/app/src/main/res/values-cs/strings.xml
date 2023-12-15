@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Serviska</string>
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+
+    <!-- Settings -->
+    <string name="mainTitleSettings">Nastavení</string>
+    <string name="notificationsSwitch">Notifikace</string>
+    <string name="unitsLabel">Jednotky</string>
+    <string name="rbMetric">Kilometry</string>
+    <string name="rbImperial">Míle</string>
+    <string name="intervalsLabel">Intervaly</string>
+    <string name="settingsIntervalName">Název</string>
+    <string name="settingsIntervalValue">Hodnota</string>
+    <string name="settingsIntervalTimeValue">Časový interval</string>
+    <string name="settingsIntervalTimeValueYears">let</string>
+    <string name="settingsIntervalTimeValueMonths">měsíců</string>
+    <string name="settingsIntervalNameFieldHint">Zadejte název</string>
+    <string name="settingsIntervalValueFieldHint">Zadejte interval</string>
+    <string name="settingsIntervalEditAccept">Uložit</string>
+    <string name="settingsIntervalAddAccept">Přidat</string>
+    <string name="settingsIntervalAddCancel">Zrušit</string>
+    <string name="settingsReallyRestoreFactory">Opravdu chcete obnovit tovární nastavení?</string>
+    <string name="settingsReallyDelete">Opravdu chcete odstranit interval \"%s\"?</string>
+
+    <!-- Factory settings -->
+    <string name="factorySettingsOil">Oil &amp; oil filter</string>
+    <string name="factorySettingsAirIntake">Air intake filter</string>
+    <string name="factorySettingsAirCabin">Air cabin filter</string>
+    <string name="factorySettingsSparkPlugs">Spark plugs</string>
+    <string name="factorySettingsBelt">Serpentine belt / Chain</string>
+    <string name="factorySettingsFuel">Fuel filter</string>
+
+    <!-- popup_menu -->
+    <string name="menuSettingsActivity">Nastavení</string>
+    <string name="menuVehiclesActivity">Vozidla</string>
+
+    <!-- popup_menu_settings -->
+    <string name="settingsAddInterval">Nový interval</string>
+    <string name="settingsRestoreFactory">Obnovit tovární nastavení</string>
+
+    <!-- Menu -->
+</resources>

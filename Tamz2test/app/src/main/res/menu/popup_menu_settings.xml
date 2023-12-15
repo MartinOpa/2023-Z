@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/settingsAddInterval"
+        android:title="@string/settingsAddInterval"
+        android:titleCondensed="settingsAddInterval"/>
+
+    <item
+        android:id="@+id/settingsRestoreFactory"
+        android:title="@string/settingsRestoreFactory"
+        android:titleCondensed="settingsRestoreFactory"/>
+
+</menu>
