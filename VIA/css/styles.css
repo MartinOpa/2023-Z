@@ -1,0 +1,279 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.navbar-container {
+    padding-left: 10%;
+    background-color: #ffffff;
+}
+
+.navbar-logo {
+    max-width: 100%; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.search-options {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-item-below {
+    top: -10px;
+    left: -15px;
+}
+
+.active {
+    cursor: pointer;
+}
+
+.arrow-up {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #a3a3a380;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.option {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar-toggler-icon {
+    background-color: #bebebe;
+}
+
+.navbar-image {
+    padding-right: 10%;
+    max-width: 200px;
+}
+
+.navbar {
+    background-color: #ffffff;
+}
+
+.navbar-brand, .navbar-nav {
+    color: #000000;
+}
+
+.nav-link {
+    color: #000000;
+}
+
+.carousel {
+    margin-top: 20px;
+}
+
+.modal-content {
+    max-width: 80vw;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.list-item img {
+    margin-right: 10px;
+    max-width: 100px;
+}
+
+.list-item div {
+    flex: 1;
+}
+
+.col-padding-left {
+    padding-left: 10%;
+    padding-right: 2%;
+}
+
+.col-padding-right {
+    padding-left: 2%;
+    padding-right: 10%;
+}
+
+.weather-padding {
+    align-items: center;
+    justify-content: center;
+    padding: 10px;    
+}
+
+.weather-image {
+    max-width: 100px;
+    max-height: 100px;
+    background-color: #ebebeb;
+    border-radius: 50%;
+}
+
+.yellow-link {
+    color: #d8b101;  
+}
+
+.grey-link {
+    color: #b9b9b9;  
+}
+
+.column-header {
+    border-bottom: 1px solid #d8b101;
+}
+
+.advert-header {
+    font-size: x-small;
+    justify-content: right;
+    border-bottom: 1px solid #d8b101;
+}
+
+.advert-content {
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-item {  
+    padding-top: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+}
+
+.map-page {
+    width: 100vw; 
+    height: 100vh;
+}
+
+.form-center {
+    padding-top: 10vh;
+}
+
+.big-text {
+    font-size: xx-large;
+}
+
+.coundown-display {
+    padding-top: 5vh;
+}
+
+.collapsible {
+    display: none;
+}
+
+.collapsible-btn {
+    cursor: pointer;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    border-color: #333333 #00000000;
+    transition: transform 0.3s;
+}
+
+.padding-right {
+    padding-right: 10px;
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-bottom: 10px;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.modal-gallery {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-gallery {
+    max-width: 90vw;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #d8b1014f;
+    font-size: small;
+    padding: 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+footer p {
+    color: #000000;
+}
+

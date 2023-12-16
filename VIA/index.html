@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sezam</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/catFacts.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/reportError.js"></script>
+    <script src="js/searchOptions.js"></script>
+    <script src="js/misc.js"></script>
+</head>
+<body>    
+    <div class="container-fluid navbar-container">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="index.html">
+                    <img src="res/sezam.png" class="navbar-logo">
+                </a>
+            </div>
+
+            <div class="col-md-8">                    
+                <div class="row">
+                    <div class="col-md-1 active option" onclick="changeSearch('internet')">Internet</div>
+                    <div class="col-md-1 active option" onclick="changeSearch('companies')">Firmy</div>
+                    <div class="col-md-1 active option" onclick="changeSearch('maps')">Mapy</div>
+                    <div class="col-md-1 active option" onclick="changeSearch('goods')">Zboží</div>
+                    <div class="col-md-1 active option" onclick="changeSearch('pics')">Obrázky</div>
+                </div>
+                <div class="row">
+                    <div class="arrow-up"></div>
+                </div>
+                <div class="row search-bar">
+                    <form id="searchForm" action="https://search.seznam.cz?" method="GET" target="_blank" class="form-inline w-100">
+                        <div class="input-group w-100">
+                            <input type="text" class="form-control w-90" id="searchInput" name="q" placeholder="...najdu tam co neznám">
+                            <div class="input-group-append w-10">
+                                <button type="submit" class="btn btn-warning">Vyhledat</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 active" onclick="navigateTo('index.html')">Domů</div>
+                    <div class="col-md-1 active" onclick="navigateTo('maps.html')">Mapy</div>
+                    <div class="col-md-1 active art-drop" onclick="toggleDropdown()">
+                        Galerie
+                        <div class="dropdown-content col" id="galleryDropdown">
+                            <div class="row" onclick="navigateTo('sezam2020.html')">Sezam 2020</div>
+                            <div class="row" onclick="navigateTo('sezam2021.html')">Sezam 2021</div>
+                            <div class="row" onclick="navigateTo('sezam2022.html')">Sezam 2022</div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 active" onclick="navigateTo('counter.html')">Počítadlo</div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <a href="https://giphy.com/stickers/justin-transparent-W0VuY0dTxH9L6vLUJ2" target="_blank">
+                    <img src="res/catAnimated.gif" class="navbar-image">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-7 col-padding-left">
+            <div class="column-header">
+                <a>🐈 Kočičí fakta</a>
+            </div>
+
+            <div id="catFacts" class="column-item">
+            </div>
+
+            <div class="column-header">
+                <a>🐱 Kočičí galerie</a>
+            </div>
+
+            <div class="carousel slide" data-ride="carousel" id="catCarousel">
+                <div class="carousel-inner">
+                </div>
+                <a class="carousel-control-prev" href="#catCarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#catCarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+            
+        </div>
+
+        <div id="col-md-1 col-padding-right">
+            <div class="row column-header">
+                <a>✉️ <b>E-mail</b> u konkurence zdarma</a>
+            </div>
+            <div class="row container column-item">
+                <div class="input-group-append w-10">
+                    <form action="https://login.szn.cz/" method="GET" target="_blank">
+                        <button type="submit" class="btn btn-warning">Přihlásit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row container">
+                <a class="yellow-link" href="https://registrace.seznam.cz/">Založit nový účet</a>
+            </div>
+
+            <div class="row advert-header">
+                Reklama ·<a class="grey-link" href="https://www.seznam.cz/dlfoj_ii6abdujua-reklam_a/" target="_blank">koupit reklamu</a>
+            </div>
+
+            <div class="row">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <a href="https://media.giphy.com/media/ND6xkVPaj8tHO/giphy.gif" target="_blank">
+                        <img src="res/catMoney.gif" class="advert-content">   
+                    </a>
+                </div>
+            </div>
+
+            <div class="row column-header">
+                <a>💼 Služby</a>
+            </div>
+            <div class="row">
+                <div class="col container">
+                    <div class="row column-item ">
+                        <a class="yellow-link" href="https://www.kupi.cz/slevy" target="_blank">Akce</a>
+                        /
+                        <a class="yellow-link" href="https://www.kupi.cz/letaky" target="_blank">Letáky</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.sauto.cz/" target="_blank">Auto</a>
+                        /
+                        <a class="yellow-link" href="https://www.smoto.cz/" target="_blank">Moto</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.sbazar.cz/" target="_blank">Bazar</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.novinky.cz/sekce/denni-tisk-zpravy-90" target="_blank">Deníky</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://sdovolena.seznam.cz/" target="_blank">Dovolená</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.emailprofi.cz/" target="_blank">Email Profi</a>
+                    </div>
+                </div>
+                <div class="col container">
+                    <div class="row column-item ">
+                        <a class="yellow-link" href="https://www.stream.cz/videa/filmy" target="_blank">Filmy online</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://hry.seznam.cz/" target="_blank">Hry</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.seznam.cz/jizdnirady/" target="_blank">Jízdní řády</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://mapy.cz/" target="_blank">Mapy</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://medium.seznam.cz/" target="_blank">Médium</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.seznam.cz/mobilni-aplikace" target="_blank">Mobilní aplikace</a>
+                    </div>
+                </div>
+                <div class="col container">
+                    <div class="row column-item ">
+                        <a class="yellow-link" href="https://podcasty.seznam.cz/#utm_source=www.seznam.cz&utm_medium=boxik-sluzeb" target="_blank">Podcasty</a> 
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.stream.cz/videa/pohadky" target="_blank">Pohádky</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.seznam.cz/prohlizec" target="_blank">Prohlížeč</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="http://www.expresfm.cz/#hraj" target="_blank">Rádio</a>
+                        /
+                        <a class="yellow-link" href="http://www.classicpraha.cz/#hraj" target="_blank">Klasika</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.sreality.cz/" target="_blank">Reality</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.prozeny.cz/sekce/recepty" target="_blank">Recepty</a>
+                    </div>
+                </div>
+                <div class="col container">
+                    <div class="row column-item ">
+                        <a class="yellow-link" href="https://slovnik.seznam.cz/" target="_blank">Slovník</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.volnamista.cz/" target="_blank">Volná místa</a>
+                    </div>
+                    <div class="row">
+                        <a class="yellow-link" href="https://www.zbozi.cz/" target="_blank">Zboží</a>
+                        /
+                        <a class="yellow-link" href="https://www.zbozi.cz/magazin/#utm_source=HP_Seznam&utm_medium=seznam_sluzeb" target="_blank">Magazín</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row column-header">
+                <p id="weatherHeader"></p>
+            </div>
+
+            <div class="row">
+                <div id="dateTime" class="weather-padding">
+                    <p id="date"></p>
+                    <p id="time"></p>
+                </div>
+
+                <div id="current-weather" class="weather-padding">
+                    <h5 class="d-flex justify-content-center align-items-center">Teď</h5>
+                    <p class="d-flex justify-content-center align-items-center" id="current-temperature"></p>
+                    <img class="weather-image d-flex justify-content-center align-items-center" id="current-conditions"></img>
+                    <p class="d-flex justify-content-center align-items-center" id="current-conditions-text"></p>
+                </div>
+        
+                <div id="tomorrow-weather" class="weather-padding">
+                    <h5 class="d-flex justify-content-center align-items-center">Zítra</h5>
+                    <p class="d-flex justify-content-center align-items-center" id="tomorrow-temperature"></p>
+                    <img class="weather-image d-flex justify-content-center align-items-center" id="tomorrow-conditions"></img>
+                    <p class="d-flex justify-content-center align-items-center" id="tomorrow-conditions-text"></p>
+                </div>
+        
+                <div id="day-after-weather" class="weather-padding">
+                    <h5 class="d-flex justify-content-center align-items-center">Pozítří</h5>
+                    <p class="d-flex justify-content-center align-items-center" id="day-after-temperature"></p>
+                    <img class="weather-image d-flex justify-content-center align-items-center" id="day-after-conditions"></img>
+                    <p class="d-flex justify-content-center align-items-center" id="day-after-conditions-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="errorForm" tabindex="-1" role="dialog" aria-labelledby="errorFormLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorFormLabel">Nahlášení chyby</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="margin: 20px;">
+                    <form id="errorForm">
+                        <div class="form-group">
+                            <label id="errorEmailLabel" for="errorEmail">E-mail:</label>
+                            <input type="email" class="form-control" id="errorEmail" name="errorEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label id="errorDescLabel" for="errorDesc">Stručný popis:</label>
+                            <input type="text" class="form-control" id="errorDesc" name="errorDesc" maxlength="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="errorFullDesc">Postup k vyvolání chyby:</label>
+                            <textarea class="form-control" id="errorFullDesc" name="errorFullDesc" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label id="captchaLabel" for="captcha">Ověření:</label>
+                            <img src="res/captcha.png" style="padding-bottom: 1;">
+                            <input type="text" class="form-control" id="captcha" name="captcha" required>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-warning" onclick="validateAndSubmit()">Odeslat</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            fetchCats();
+            fetchWeather();
+            initClock();
+            changeSearch('internet');
+            initDropDown();
+            initCarousel('catCarousel', 'res/catPics/', 5);
+        });
+    </script>
+
+    <footer>
+        <div class="row">
+            <div class="col footer-left">
+                <a>Studentský projekt do předmětu VIA</a>
+            </div>
+            <div class="col footer-center">
+                <a class="footer-center" data-toggle="modal" data-target="#errorForm">Nahlásit chybu</a>
+            </div>
+            <div class="col footer-right">
+                <a href="https://www.freepik.com/search?format=search&last_filter=selection&last_value=1&query=aesthetic%20cat&selection=1&type=photo" target="_blank">Obrázky koček</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

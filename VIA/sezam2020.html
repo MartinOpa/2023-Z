@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sezam 2020</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>   
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/reportError.js"></script>
+    <script src="js/searchOptions.js"></script>
+    <script src="js/misc.js"></script>
+    <script src="js/gallery.js"></script>
+</head>
+<body>    
+    <div class="container-fluid navbar-container">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="index.html">
+                    <img src="res/sezam.png" class="navbar-logo">
+                </a>
+            </div>
+
+            <div class="col-md-8">                    
+                <div class="row">
+                    <div class="col-md-1 active option" onclick="changeSearch('internet')">Internet</div>
+                    <div class="col-md-1 active option" onclick="changeSearch('companies')">Firmy</div>
+                    <div class="col-md-1 active option" onclick="changeSearch('maps')">Mapy</div>
+                    <div class="col-md-1 active option" onclick="changeSearch('goods')">Zboží</div>
+                    <div class="col-md-1 active option" onclick="changeSearch('pics')">Obrázky</div>
+                </div>
+                <div class="row">
+                    <div class="arrow-up"></div>
+                </div>
+                <div class="row search-bar">
+                    <form id="searchForm" action="https://search.seznam.cz?" method="GET" target="_blank" class="form-inline w-100">
+                        <div class="input-group w-100">
+                            <input type="text" class="form-control w-90" id="searchInput" name="q" placeholder="...najdu tam co neznám">
+                            <div class="input-group-append w-10">
+                                <button type="submit" class="btn btn-warning">Vyhledat</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 active" onclick="navigateTo('index.html')">Domů</div>
+                    <div class="col-md-1 active" onclick="navigateTo('maps.html')">Mapy</div>
+                    <div class="col-md-1 active art-drop" onclick="toggleDropdown()">
+                        Galerie
+                        <div class="dropdown-content col" id="galleryDropdown">
+                            <div class="row" onclick="navigateTo('sezam2020.html')">Sezam 2020</div>
+                            <div class="row" onclick="navigateTo('sezam2021.html')">Sezam 2021</div>
+                            <div class="row" onclick="navigateTo('sezam2022.html')">Sezam 2022</div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 active" onclick="navigateTo('counter.html')">Počítadlo</div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <a href="https://giphy.com/stickers/justin-transparent-W0VuY0dTxH9L6vLUJ2" target="_blank">
+                    <img src="res/catAnimated.gif" class="navbar-image">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery" id="dynamicGallery">
+    </div>
+    
+    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            changeSearch('internet');
+            initDropDown();
+            initGallery('dynamicGallery', 'res/sezam2020/', 31);
+        });
+    </script>
+
+    <div class="modal fade" id="errorForm" tabindex="-1" role="dialog" aria-labelledby="errorFormLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorFormLabel">Nahlášení chyby</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="margin: 20px;">
+                    <form id="errorForm">
+                        <div class="form-group">
+                            <label id="errorEmailLabel" for="errorEmail">E-mail:</label>
+                            <input type="email" class="form-control" id="errorEmail" name="errorEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label id="errorDescLabel" for="errorDesc">Stručný popis:</label>
+                            <input type="text" class="form-control" id="errorDesc" name="errorDesc" maxlength="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="errorFullDesc">Postup k vyvolání chyby:</label>
+                            <textarea class="form-control" id="errorFullDesc" name="errorFullDesc" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label id="captchaLabel" for="captcha">Ověření:</label>
+                            <img src="res/captcha.png" style="padding-bottom: 1;">
+                            <input type="text" class="form-control" id="captcha" name="captcha" required>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-warning" onclick="validateAndSubmit()">Odeslat</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col footer-left">
+                <a>Studentský projekt do předmětu VIA</a>
+            </div>
+            <div class="col footer-center">
+                <a class="footer-center" data-toggle="modal" data-target="#errorForm">Nahlásit chybu</a>
+            </div>
+            <div class="col footer-right">
+                <a href="https://www.freepik.com/search?format=search&query=sesame&selection=1&type=photo" target="_blank">Obrázky sezamu</a>
+            </div>
+    </footer>
+</body>
+</html>
