@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Serviska</string>
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+    <string name="ok">Dobře</string>
+    <string name="updateMileage">Aktualizovat nájezd?</string>
+
+    <!-- Notifications -->
+    <string name="notificationsTitle">Vaše vozidla Vás potřebují!</string>
+    <string name="notificationsText">Věnujte chvilku času aktualizaci vozidel a prohlédnutí servisního plánu.</string>
+
+    <!-- Settings -->
+    <string name="unitsColumnLabelTime">Čas</string>
+    <string name="mainTitleSettings">Nastavení</string>
+    <string name="notificationsSwitch">Notifikace</string>
+    <string name="unitsLabel">Jednotky</string>
+    <string name="rbMetric">Kilometry</string>
+    <string name="rbImperial">Míle</string>
+    <string name="intervalsLabel">Interval</string>
+    <string name="settingsIntervalName">Název</string>
+    <string name="settingsIntervalValue">Hodnota</string>
+    <string name="settingsIntervalYearValue">l</string>
+    <string name="settingsIntervalMonthValue">m</string>
+    <string name="settingsIntervalTimeValue">Časový interval</string>
+    <string name="settingsIntervalTimeValueYears">let</string>
+    <string name="settingsIntervalTimeValueMonths">měsíců</string>
+    <string name="settingsIntervalNameFieldHint">Zadejte název</string>
+    <string name="settingsIntervalValueFieldHint">Zadejte interval</string>
+    <string name="settingsIntervalEditAccept">Uložit</string>
+    <string name="settingsIntervalAddAccept">Přidat</string>
+    <string name="settingsIntervalAddCancel">Zrušit</string>
+    <string name="settingsReallyRestoreFactory">Opravdu chcete obnovit tovární nastavení?</string>
+    <string name="settingsReallyDelete">Opravdu chcete odstranit interval \'%s\'?</string>
+    <string name="convertUnitsTo">Převést na</string>
+    <string name="convertUnitsPrompt">Převést hodnoty intervalů na %s?</string>
+
+    <!-- Factory settings -->
+    <string name="factorySettingsOil">Olej a olejový filtr</string>
+    <string name="factorySettingsAirIntake">Vzduchový filtr</string>
+    <string name="factorySettingsAirCabin">Kabinový filtr</string>
+    <string name="factorySettingsSparkPlugs">Svíčky</string>
+    <string name="factorySettingsBelt">Rozvody</string>
+    <string name="factorySettingsFuel">Palivový filtr</string>
+
+    <!-- popup_menu -->
+    <string name="menuSettingsActivity">Nastavení</string>
+    <string name="menuVehiclesActivity">Vozidla</string>
+    <string name="menuAddServiceItem">Nový záznam</string>
+
+    <!-- popup_menu_settings -->
+    <string name="settingsAddInterval">Nový interval</string>
+    <string name="settingsRestoreFactory">Tovární nastavení</string>
+    <string name="settingsConvertUnits">Převést jednotky</string>
+
+    <!-- Menu -->
+    <string name="mainMenuMileageApiError">Při čtení obrázku došlo k chybě, zkuste, prosím, obrázek
+        ořezat, pořídit pod lepším úhlem, nebo zadejte nájezd ručně.</string>
+    <string name="upcomingTab">Servisní plán</string>
+    <string name="historyTab">Servisní historie</string>
+    <string name="reallyDelete">Opravdu chcete odstranit tento záznam?</string>
+    <string name="noVehicles">Nemáte žádná vozidla, vytvořte záznam ve vozidlech!</string>
+
+    <!-- Add service interval -->
+    <string name="serviceItemAddVinTitle">Vozidlo</string>
+    <string name="serviceItemAddIntervalTitle">Intervaly</string>
+    <string name="serviceItemAddDateTitle">Datum</string>
+    <string name="serviceItemAddMileageTitle">Nájezd</string>
+    <string name="serviceItemAddCustomNoteTitle">Poznámka</string>
+
+    <!-- Vehicles -->
+    <string name="mainTitleVehicles">Vozidla</string>
+    <string name="vehiclesReallyDelete">Opravdu chcete odstranit  \'%s %s\', SPZ \'%s\'?</string>
+
+    <!-- VehicleDetail -->
+    <string name="vehicleDetailPlaceHolder">Nové vozidlo</string>
+    <string name="vehicleDetailMake">Značka</string>
+    <string name="vehicleDetailModel">Model</string>
+    <string name="vehicleDetailYear">Rok výroby</string>
+    <string name="vehicleDetailPlate">SPZ</string>
+    <string name="vehicleDetailMileage">Nájezd</string>
+    <string name="vehicleDetailCustomNote">Vlastní poznámky</string>
+    <string name="vehicleDetailEditVinError">Pole \'VIN\' nelze změnit!</string>
+    <string name="vehicleDetailEmptyVinError">Pole \'VIN\' nemůže být prázdné!</string>
+</resources>

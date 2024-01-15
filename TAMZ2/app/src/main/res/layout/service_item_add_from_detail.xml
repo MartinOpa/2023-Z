@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".VehiclesActivity"
+        tools:showIn="@layout/service_item_add_from_detail">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/serviceItemAddVinTitle"
+                android:layout_width="240dp"
+                android:layout_height="25dp"
+                android:text="@string/serviceItemAddVinTitle"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/serviceItemAddDateTitle"
+                android:layout_width="240dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/serviceItemAddDateTitle"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddIntervalPicker"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/serviceItemAddDateDisplay"
+                android:layout_width="190dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="12.5dp"
+                android:layout_marginBottom="12.5dp"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddDateTitle"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/serviceItemAddDateButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_calendar_today_24"
+                android:text="Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/serviceItemAddDateDisplay"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddDateTitle"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/serviceItemAddMileageInput"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddMileageTitle"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/serviceItemAddCustomNoteContainer"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddCustomNoteTitle"
+                app:layout_constraintVertical_bias="0.0">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/serviceItemAddCustomNoteInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/serviceItemAddIntervalPicker"
+                android:layout_width="240dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddVinTitle"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/settingsIntervalAddCancel"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="1dp"
+                android:text="@string/settingsIntervalAddCancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/serviceItemAddCustomNoteContainer"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/serviceItemAddCustomNoteContainer"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddCustomNoteContainer"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/settingsIntervalAddAccept"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="115dp"
+                android:text="@string/settingsIntervalAddAccept"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/serviceItemAddCustomNoteContainer"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/serviceItemAddCustomNoteContainer"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddCustomNoteContainer"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/serviceItemAddMileageTitle"
+                android:layout_width="240dp"
+                android:layout_height="30dp"
+                android:text="@string/serviceItemAddMileageTitle"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddDateButton"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/serviceItemAddCustomNoteTitle"
+                android:layout_width="240dp"
+                android:layout_height="30dp"
+                android:text="@string/serviceItemAddCustomNoteTitle"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/serviceItemAddMileageInput"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

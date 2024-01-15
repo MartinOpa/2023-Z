@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Carfaux</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Okay</string>
+    <string name="updateMileage">Update mileage?</string>
+
+    <!-- Notifications -->
+    <string name="notificationsTitle">Your vehicles need you!</string>
+    <string name="notificationsText">Take a minute to update your vehicles and check your service plan.</string>
+
+    <!-- Settings -->
+    <string name="unitsColumnLabelMetric" translatable="false">km</string>
+    <string name="unitsColumnLabelImperial" translatable="false">mi</string>
+    <string name="unitsColumnLabelTime">Time</string>
+    <string name="mainTitleSettings">Settings</string>
+    <string name="notificationsSwitch">Notifications</string>
+    <string name="unitsLabel">Units</string>
+    <string name="rbMetric">Metric</string>
+    <string name="rbImperial">Imperial</string>
+    <string name="intervalsLabel">Interval</string>
+    <string name="settingsIntervalName">Name</string>
+    <string name="settingsIntervalValue">Value</string>
+    <string name="settingsIntervalYearValue">y</string>
+    <string name="settingsIntervalMonthValue">m</string>
+    <string name="settingsIntervalTimeValue">Time interval</string>
+    <string name="settingsIntervalTimeValueYears">years</string>
+    <string name="settingsIntervalTimeValueMonths">months</string>
+    <string name="settingsIntervalNameFieldHint">Enter name</string>
+    <string name="settingsIntervalValueFieldHint">Enter value</string>
+    <string name="settingsIntervalEditAccept">Save</string>
+    <string name="settingsIntervalAddAccept">Add</string>
+    <string name="settingsIntervalAddCancel">Cancel</string>
+    <string name="settingsReallyRestoreFactory">Do you really wish to restore factory settings?</string>
+    <string name="settingsReallyDelete">Do you really wish to delete interval \'%s\'?</string>
+    <string name="convertUnitsTo">Choose unit to convert to</string>
+    <string name="convertUnitsPrompt">Convert interval values to %s?</string>
+
+    <!-- Factory settings -->
+    <string name="factorySettingsOil">Oil and oil filter</string>
+    <string name="factorySettingsAirIntake">Air intake filter</string>
+    <string name="factorySettingsAirCabin">Air cabin filter</string>
+    <string name="factorySettingsSparkPlugs">Spark plugs</string>
+    <string name="factorySettingsBelt">Serpentine belt</string>
+    <string name="factorySettingsFuel">Fuel filter</string>
+
+    <!-- popup_menu -->
+    <string name="menuSettingsActivity">Settings</string>
+    <string name="menuVehiclesActivity">Vehicles</string>
+    <string name="menuAddServiceItem">New service entry</string>
+
+    <!-- popup_menu_settings -->
+    <string name="settingsAddInterval">New Interval</string>
+    <string name="settingsRestoreFactory">Restore factory settings</string>
+    <string name="settingsConvertUnits">Convert units</string>
+
+    <!-- Menu -->
+    <string name="mainMenuMileageApiError">Error reading image, try cropping the image,
+        taking the picture at a better angle or adding the mileage manually</string>
+    <string name="upcomingTab">Service plan</string>
+    <string name="historyTab">Service history</string>
+    <string name="reallyDelete">Do you really wish to delete this entry?</string>
+    <string name="noVehicles">No vehicles found, head to vehicles and add one!</string>
+
+    <!-- Add service interval -->
+    <string name="serviceItemAddVinTitle">Vehicle</string>
+    <string name="serviceItemAddIntervalTitle">Intervals</string>
+    <string name="serviceItemAddDateTitle">Date</string>
+    <string name="serviceItemAddMileageTitle">Mileage</string>
+    <string name="serviceItemAddCustomNoteTitle">Custom note</string>
+
+    <!-- Vehicles -->
+    <string name="mainTitleVehicles">Vehicles</string>
+    <string name="vehiclesReallyDelete">Do you really wish to delete \'%s %s\', plate \'%s\'?</string>
+
+    <!-- VehicleDetail -->
+    <string name="vehicleDetailPlaceHolder">New vehicle</string>
+    <string name="vehicleDetailVin" translatable="false">VIN</string>
+    <string name="vehicleDetailMake">Make</string>
+    <string name="vehicleDetailModel">Model</string>
+    <string name="vehicleDetailYear">Year</string>
+    <string name="vehicleDetailPlate">Reg plate</string>
+    <string name="vehicleDetailMileage">Mileage</string>
+    <string name="vehicleDetailCustomNote">Custom note</string>
+    <string name="vehicleDetailEditVinError">The \'VIN\' attribute cannot be changed!</string>
+    <string name="vehicleDetailEmptyVinError">The \'VIN\' attribute cannot be empty!</string>
+</resources>
